@@ -1,4 +1,4 @@
-name: My workflow
+name: Print Text from main.html
 on: 
   push:
     branches: 
@@ -9,6 +9,9 @@ jobs:
 
     steps:
     
-    - name: Print
-      run: echo "test"
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: print
+      run: cat main.html
   
